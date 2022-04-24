@@ -8,7 +8,7 @@ function OutraRota() {
   return (
     <div>
       <h1>Route/id/Buscar e o id é == {id}</h1>
-      <Link href={"/routes"}>
+      <Link href={"/routes"} passHref>
         <button>Voltar</button>
       </Link>
     </div>

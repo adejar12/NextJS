@@ -16,13 +16,13 @@ function routes() {
       <li style={{ fontWeight: 800, fontSize: 18 }}>Navegação Com Link</li>
       <div>
         <ul>
-          <Link href={"/routes/123/buscar"}>
+          <Link href={"/routes/123/buscar"} passHref>
             <li>[id]/buscar</li>
           </Link>
-          <Link href={"/routes/params?nome=Jose&sobrenome=Junior"}>
+          <Link href={"/routes/params?nome=Jose&sobrenome=Junior"} passHref>
             <li>Params</li>
           </Link>
-          <Link href={"/routes/123/João"}>
+          <Link href={"/routes/123/João"} passHref>
             <li>[id]/[nome]</li>
           </Link>
         </ul>

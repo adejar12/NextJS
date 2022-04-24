@@ -11,7 +11,7 @@ function Params() {
       <h1>
         O nome é {nome} e o sobrenome é {sobrenome}
       </h1>
-      <Link href={"/routes"}>
+      <Link href={"/routes"} passHref>
         <button>Voltar</button>
       </Link>
     </div>

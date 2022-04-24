@@ -11,7 +11,7 @@ function Nome() {
       <h1>
         Route/id/[nome] e o id é == {id} e o nome é == {nome}
       </h1>
-      <Link href={"/routes"}>
+      <Link href={"/routes"} passHref>
         <button>Voltar</button>
       </Link>
     </div>

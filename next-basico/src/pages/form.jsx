@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-function form() {
+function Form() {
   const [nome, setNome] = useState("");
   const [idade, setIdade] = useState(0);
   const [usuarios, setUsuarios] = useState([]);
 
   async function salvarUsuario() {
-    await fetch("/api/form", {
+    await fetch("/api/F", {
       method: "POST",
       body: JSON.stringify({
         nome,
@@ -53,4 +53,4 @@ function form() {
   );
 }
 
-export default form;
+export default Form;
