@@ -15,3 +15,11 @@ a {
 * {
     box-sizing: border-box;
 }
+
+
+/*Criando variavel no CSS*/
+
+:root {
+    --area-porta-altura: 310px;
+    --area-porta--largura: 200px;
+}
