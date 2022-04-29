@@ -1,0 +1,14 @@
+.porta {
+    display: flex;
+    flex-direction: column;
+    background-color: chocolate;
+    align-items: center;
+    padding: 15px;
+    /*Usando variaveis que estão no globals*/
+    width: var( --area-porta--largura);
+    height: var(--area-porta-altura);
+}
+
+.numero {
+    font-size: 3rem;
+}
