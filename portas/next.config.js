@@ -1,6 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
-module.exports = nextConfig
+module.exports = {
+  webpack: (config, options) => {
+    if (config.resolve.plugins) {
+      config.resolve.plugins.push(new TsconfigPathsPlugin());
+    } else {
+      config.resolve.plugins = [new TsconfigPathsPlugin()];
+    }
+
+    return config;
+  },
+  target: "serverless",
+};
