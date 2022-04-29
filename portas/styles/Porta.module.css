@@ -1,14 +1,70 @@
+.area {
+    position: relative;
+    display: flex;
+    /*Usando variaveis que estão no globals*/
+    width: var( --area-porta--largura);
+    height: var(--area-porta-altura);
+    flex-direction: column;
+    align-items: center;
+    margin: 5px
+}
+
+.estrutura {
+    display: flex;
+    /*  utilize flex-grow é para ocupar toda a area disponivel
+        para não precisar colocar width e height 100%
+    */
+    flex-grow: 1;
+    border-left: 5px solid brown;
+    border-right: 5px solid brown;
+    border-top: 5px solid brown;
+    width: 90%;
+}
+
 .porta {
     display: flex;
     flex-direction: column;
     background-color: chocolate;
     align-items: center;
     padding: 15px;
-    /*Usando variaveis que estão no globals*/
-    width: var( --area-porta--largura);
-    height: var(--area-porta-altura);
+    /*  utilize flex-grow é para ocupar toda a area disponivel
+        para não precisar colocar width e height 100%
+    */
+    flex-grow: 1;
 }
 
 .numero {
     font-size: 3rem;
+}
+
+.macaneta {
+    position: absolute;
+    align-self: flex-start;
+    /* Calculo, pegar 45% da altura da porta */
+    top: calc(0.45 * var(--area-porta-altura));
+    height: 20px;
+    width: 20px;
+    border-radius: 1;
+    background-color: brown;
+    border-radius: 10px;
+}
+
+.chao {
+    height: 10px;
+    width: 100%;
+    background-color: #ddd;
+}
+
+.selecionada {
+    border-left: 5px solid yellow;
+    border-right: 5px solid yellow;
+    border-top: 5px solid yellow;
+}
+
+.selecionada .numero {
+    color: yellow;
+}
+
+.selecionada .macaneta {
+    background-color: yellow;
 }
